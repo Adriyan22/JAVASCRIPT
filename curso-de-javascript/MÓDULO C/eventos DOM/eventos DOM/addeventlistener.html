@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo addeventlistener em javascript</title>
+</head>
+<style>
+
+   .btn {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+   }
+
+  
+</style>
+<body>
+
+
+    <h1>addeventlisterner em javascript</h1>
+
+    <button class="btn" onmouse>
+        interaja
+    </button>
+
+    <script>
+        var botao = document.querySelector('.btn')
+        botao.addEventListener('click', clicar)
+        botao.addEventListener('mousemove', mover)
+        botao.addEventListener('mouseout', sair)
+
+
+        function clicar(){
+            botao.style.scale = '2.0'
+            alert('vc clicou e o botao alterou seu tamanho')
+        }
+
+        function mover(){
+            botao.style.backgroundColor = 'purple'
+            botao.style.color = 'white'
+        }
+
+        function sair(){
+            botao.style.backgroundColor = 'black'
+            botao.style.scale = '3.0'
+        }
+
+    </script>
+
+
+</body>
+</html>

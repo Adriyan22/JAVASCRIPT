@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM </title>
+</head>
+<style>
+    #box {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h1 >aprendendo usar eventos em javascript</h1>
+
+    <div id="box" 
+    onmouseenter="entrando()"
+    onmouseout="saindo()"
+    onclick="clicando()"
+    onmousemove="movendo()"
+    >
+        
+    </div>
+
+    <script>
+        var caixa = document.getElementById('box')
+
+        function entrando(){
+            caixa.style.scale = '1.2'
+            caixa.innerText = 'ficou preta ao entrar'
+        }
+
+        function saindo(){
+            caixa.style.backgroundColor = 'red'
+            caixa.innerText = 'ficou vermelha ao sair'
+        }
+
+        function clicando(){
+            caixa.style.backgroundColor = 'blue'
+            caixa.innerText = 'ficou azul ao clicar'
+        }
+
+        function movendo(){
+            caixa.style.backgroundColor = 'purple'
+            caixa.innerText= 'ficou roxa ao mover o mouse'
+        }
+    </script>
+</body>
+</html>
